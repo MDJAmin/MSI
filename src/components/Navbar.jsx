@@ -1,26 +1,61 @@
 import React from "react";
 import { bagImg, msiImg, searchImg } from "../utils";
 import { navLists } from "../constants";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 export default function Navbar() {
+  useGSAP(() => {
+    gsap.to(".logo-icon", {
+      opacity: 1,
+      direction: 5,
+      delay: 0.5,
+    });
+    gsap.fromTo(
+      ".nav-items",
+      {
+        opacity: 0,
+        y: -30,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        direction: 1,
+        stagger: 0.1,
+        scrub: true,
+      }
+    );
+  }, []);
   return (
     <header className="w-full py-5 sm:px-10 px-5 flex justify-between items-center">
       <nav className="flex w-full screen-max-width">
-        <img src={msiImg} alt="MSI" className="w-10" />
+        <img src={msiImg} alt="MSI" className="logo-icon w-10 opacity-0" />
 
         <div className="flex flex-1 justify-center mt-5 max-sm:hidden">
           {navLists.map((nav) => (
             <div
               key={nav}
-              className="px-5 text-sm cursor-pointer text-gray hover:text-red-600 hover:scale-[1.1] transition-all"
+              className="nav-items px-5 text-sm cursor-pointer text-gray hover:text-red-600 hover:scale-[1.1] "
             >
               {nav}
             </div>
           ))}
         </div>
         <div className="flex items-baseline mt-5 gap-7 max-sm:justify-end max-sm:flex-1">
-          <img src={searchImg} alt="search" width={18} height={18} className="cursor-pointer hover:scale-[1.1] transition-all"/>
-          <img src={bagImg} alt="bag" width={18} height={30} className="cursor-pointer hover:scale-[1.1] transition-all"/>
+          <img
+            src={searchImg}
+            alt="search"
+            width={18}
+            height={18}
+            className="opacity-0 logo-icon cursor-pointer hover:scale-[1.1] "
+          />
+          <img
+            src={bagImg}
+            alt="bag"
+            width={18}
+            height={30}
+            className="opacity-0 logo-icon cursor-pointer hover:scale-[1.1] "
+          />
         </div>
       </nav>
     </header>

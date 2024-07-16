@@ -23,6 +23,15 @@ export default function Hero() {
           y: 100,
         },
         { opacity: 0.9, y: -1, duration: 4 }
+      ),
+      gsap.fromTo(
+        ".btn",
+        {
+          opacity: 0,
+          y: 50,
+          delay: 1,
+        },
+        { opacity: 0.9, y: -1, duration: 4,    delay: 1,}
       )
     );
   }, []);
@@ -43,7 +52,12 @@ export default function Hero() {
           </video>
         </div>
       </div>
-      <div></div>
+
+      <div id="action" className="flex flex-col items-center ">
+        <a href="#Popular" className="btn">
+          See More!
+        </a>
+      </div>
     </section>
   );
 }
