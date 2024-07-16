@@ -20,10 +20,6 @@ import replay from "/assets/images/replay.svg";
 import play from "/assets/images/play.svg";
 import pause from "/assets/images/pause.svg";
 
-// import yellow from "/assets/images/yellow.jpg";
-// import blue from "/assets/images/blue.jpg";
-// import white from "/assets/images/white.jpg";
-// import black from "/assets/images/black.jpg";
 import explore1 from "/assets/images/explore1.mp4";
 import explore2 from "/assets/images/explore2.jpg";
 import chip from "/assets/images/chip.jpg";
