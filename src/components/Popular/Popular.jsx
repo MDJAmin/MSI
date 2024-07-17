@@ -120,6 +120,7 @@ import {
   highlightThirdGif,
   highlightThirdVideo,
 } from "../../utils";
+import Model from "../Model/Model";
 
 export default function App() {
   const swiperRef = useRef(null);
@@ -206,6 +207,7 @@ export default function App() {
           </SwiperSlide>
         </Swiper>
       </div>
+      <Model/>
     </>
   );
 }

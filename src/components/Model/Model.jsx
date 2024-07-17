@@ -15,7 +15,7 @@ export default function Model() {
         header,
         {
           opacity: 0,
-          y: -70,
+          y: -100,
     
         },
         {
@@ -74,6 +74,7 @@ export default function Model() {
             <Model3D />
           </div>
         </div>
+        <div>
         <p className="text-center relative bottom-60 Paragraphs">
     
           MSI GF65 Thin 10UE-213 15.6" Gaming Laptop
@@ -85,6 +86,7 @@ export default function Model() {
           power users who demand the best. Featuring cutting-edge technology and
           sleek aesthetics, it is the perfect companion for both work and play.
         </p>
+        </div>
       </div>
     </section>
   );

@@ -3,6 +3,7 @@ import gsap from "gsap";
 import React, { useState } from "react";
 import { heroVideo } from "../../utils";
 import "./style.module.css";
+import { Link } from 'react-router-dom';
 export default function Hero() {
   useGSAP(() => {
     gsap.fromTo(
@@ -28,11 +29,9 @@ export default function Hero() {
         ".btn",
         {
           opacity: 0,
-          y: 0,
-          delay: 1,
           scrub: true,
         },
-        { opacity: 0.9, y: -130, duration: 4, scrub: true }
+        { opacity: 0.9, duration: 4, delay: 2, scrub: true }
       )
     );
   }, []);
@@ -54,13 +53,10 @@ export default function Hero() {
         </div>
       </div>
 
-      <div
-        id="action"
-        className="flex flex-col items-center relative -bottom-28"
-      >
-        <a href="#Popular" className="btn">
-          See More!
-        </a>
+      <div id="" className="flex flex-col items-center relative">
+      <Link to="/popular" className="btn">
+        See More!
+      </Link>
       </div>
     </section>
   );
