@@ -36,25 +36,6 @@ export default function Model() {
 
     
   }, []);
-
-//   const Description = gsap.utils.toArray(".Description");
-//   Description.forEach((description) => {
-//     gsap.fromTo(
-//       description,
-//       { opacity: 0, x: 350, y: -40 },
-//       {
-//         y: 0,
-//         opacity: 1,
-//         scrollTrigger: {
-//           trigger: header,
-//           start: "bottom bottom",
-//           end: "top 30%",
-//           scrub: true,
-//           stagger: 1,
-//         },
-//       }
-//     );
-//   }, []);
   return (
     <section className="common-padding">
       <div className="screen-max-width" ref={scrollRef}>

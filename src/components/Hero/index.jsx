@@ -3,7 +3,7 @@ import gsap from "gsap";
 import React, { useState } from "react";
 import { heroVideo } from "../../utils";
 import "./style.module.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 export default function Hero() {
   useGSAP(() => {
     gsap.fromTo(
@@ -54,9 +54,9 @@ export default function Hero() {
       </div>
 
       <div id="" className="flex flex-col items-center relative">
-      <Link to="/popular" className="btn">
-        See More!
-      </Link>
+        <a href="#Popular" className="btn">
+          See More!
+        </a>
       </div>
     </section>
   );

@@ -10,6 +10,9 @@ function Model() {
   return <primitive object={scene} scale={[0.5, 0.5, 0.5]} />;
 }
 
+// Preload the GLTF file
+useGLTF.preload('/models/scene.gltf');
+
 export default function Model3D() {
   return (
     <Canvas>
@@ -17,8 +20,7 @@ export default function Model3D() {
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
         <Model />
-        {/* <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} /> */}
-        <OrbitControls enableZoom={false}  />
+        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
       </Suspense>
     </Canvas>
   );

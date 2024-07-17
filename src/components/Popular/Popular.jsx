@@ -207,7 +207,6 @@ export default function App() {
           </SwiperSlide>
         </Swiper>
       </div>
-      <Model/>
     </>
   );
 }
