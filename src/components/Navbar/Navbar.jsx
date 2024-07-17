@@ -55,14 +55,14 @@ export default function Navbar() {
             alt="search"
             width={18}
             height={18}
-            className="opacity-0 logo-icon cursor-pointer hover:scale-[1.1] "
+            className="opacity-0 logo-icon cursor-pointer"
           />
           <img
             src={bagImg}
             alt="bag"
             width={18}
             height={30}
-            className="opacity-0 logo-icon cursor-pointer hover:scale-[1.1] "
+            className="opacity-0 logo-icon cursor-pointer"
           />
         </div>
       </nav>

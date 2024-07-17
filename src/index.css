@@ -14,7 +14,6 @@ html{
 }
 .swiper-scrollbar-drag{
   background: red !important;
-  padding: 0 50px;
 }
 body {
   color: white;
