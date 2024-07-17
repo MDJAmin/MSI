@@ -17,7 +17,8 @@ export default function Model3D() {
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
         <Model />
-        <OrbitControls enableZoom={false} />
+        {/* <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} /> */}
+        <OrbitControls enableZoom={false}  />
       </Suspense>
     </Canvas>
   );

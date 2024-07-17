@@ -163,7 +163,7 @@ export default function App() {
 
   return (
     <>
-      <div id="Popular" className="mb-20">
+      <div id="Popular" className="mb-40 mt-20">
         <Swiper
           // scrollbar={{
           //   hide: true,
