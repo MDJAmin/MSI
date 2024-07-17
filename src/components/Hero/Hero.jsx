@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useState } from "react";
-import { heroVideo } from "../utils";
+import { heroVideo } from "../../utils";
 
 export default function Hero() {
   useGSAP(() => {
@@ -9,11 +9,11 @@ export default function Hero() {
       ".hero-title",
       {
         opacity: 0,
-        y: 100,
+        y: -50,
       },
       {
         opacity: 0.9,
-        y: -1,
+        y: 0,
         duration: 4,
       },
       gsap.fromTo(
@@ -28,10 +28,10 @@ export default function Hero() {
         ".btn",
         {
           opacity: 0,
-          y: 50,
+          y: 10,
           delay: 1,
         },
-        { opacity: 0.9, y: -1, duration: 4,    delay: 1,}
+        { opacity: 0.9, y: 0, duration: 4,    delay: 1,}
       )
     );
   }, []);
@@ -43,7 +43,7 @@ export default function Hero() {
         </p>
         <div className="md:w-10/12 w-9/12">
           <video
-            className="Video-logo pointer-events-none"
+            className="pointer-events-none"
             autoPlay
             muted
             playsInline={true}

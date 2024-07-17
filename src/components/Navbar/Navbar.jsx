@@ -1,16 +1,24 @@
 import React from "react";
-import { bagImg, msiImg, searchImg } from "../utils";
-import { navLists } from "../constants";
+import { bagImg, msiImg, searchImg } from "../../utils";
+import { navLists } from "../../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 export default function Navbar() {
   useGSAP(() => {
-    gsap.to(".logo-icon", {
-      opacity: 1,
-      direction: 5,
-      delay: 0.5,
-    });
+    gsap.fromTo(
+      ".logo-icon",
+      {
+        opacity: 0,
+        y: -25,
+        direction: 5,
+        delay: 0.5,
+      },
+      {
+        opacity: 1,
+        y: 0,
+      }
+    );
     gsap.fromTo(
       ".nav-items",
       {

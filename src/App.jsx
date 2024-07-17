@@ -1,6 +1,6 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Popular from "./components/Popular";
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
+import Popular from "./components/Popular/Popular";
 
 export default function App() {
   return (
