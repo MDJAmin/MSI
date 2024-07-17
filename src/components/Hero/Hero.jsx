@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useState } from "react";
 import { heroVideo } from "../../utils";
-
+import "./style.module.css";
 export default function Hero() {
   useGSAP(() => {
     gsap.fromTo(
@@ -28,10 +28,11 @@ export default function Hero() {
         ".btn",
         {
           opacity: 0,
-          y: 10,
+          y: 0,
           delay: 1,
+          scrub: true,
         },
-        { opacity: 0.9, y: 0, duration: 4,    delay: 1,}
+        { opacity: 0.9, y: -130, duration: 4, scrub: true }
       )
     );
   }, []);
@@ -53,7 +54,10 @@ export default function Hero() {
         </div>
       </div>
 
-      <div id="action" className="flex flex-col items-center ">
+      <div
+        id="action"
+        className="flex flex-col items-center relative -bottom-28"
+      >
         <a href="#Popular" className="btn">
           See More!
         </a>

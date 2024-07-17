@@ -8,6 +8,12 @@ import highlightFirstmv from "/assets/videos/highlight-first.mp4";
 import highlightSectmv from "/assets/videos/hightlight-third.mp4";
 import highlightThirdmv from "/assets/videos/hightlight-sec.mp4";
 import highlightFourthmv from "/assets/videos/hightlight-fourth.mp4";
+
+import highlightFirstmvgif from "/assets/videos/highlight-first.gif";
+import highlightSectmvgif from "/assets/videos/hightlight-third.gif";
+import highlightThirdmvgif from "/assets/videos/hightlight-sec.gif";
+import highlightFourthmvgif from "/assets/videos/hightlight-fourth.gif";
+
 import exploremv from "/assets/videos/explore.jpg";
 
 
@@ -31,6 +37,12 @@ export const highlightFirstVideo = highlightFirstmv;
 export const highlightSecondVideo = highlightSectmv;
 export const highlightThirdVideo = highlightThirdmv;
 export const highlightFourthVideo = highlightFourthmv;
+
+export const highlightFirstGif = highlightFirstmvgif;
+export const highlightSecondGif = highlightSectmvgif;
+export const highlightThirdGif = highlightThirdmvgif;
+export const highlightFourthGif = highlightFourthmvgif;
+
 export const exploreVideo = exploremv;
 
 
