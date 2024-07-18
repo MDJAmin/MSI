@@ -120,7 +120,7 @@ import {
   highlightThirdGif,
   highlightThirdVideo,
 } from "../../utils";
-import Model from "../Model/Model";
+import Model from "../Model";
 
 export default function App() {
   const swiperRef = useRef(null);
