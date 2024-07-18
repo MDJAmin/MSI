@@ -28,13 +28,9 @@ const Features = () => {
     <section className="h-full common-padding bg-zinc relative overflow-hidden">
       <div className="screen-max-wdith">
         <div className="mb-12 mt-24 w-full">
-          <h1 id="features_title" className="section-heading ps-24">
+          <h1 id="features_title" className="section-heading ps-60">
             Explore the full story.
           </h1>
-          <div className="section-heading mb-24 ps-24 mt-20">
-            <h2 className="text-5xl lg:text-7xl font-semibold">iPhone.</h2>
-            <h2 className="text-5xl lg:text-7xl font-semibold">Forged in deeps of hell.</h2>
-          </div>
         </div>
 
         <div className="flex flex-col justify-center items-center overflow-hidden">

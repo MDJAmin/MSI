@@ -10,8 +10,31 @@ import {
   highlightSecondGif,
   highlightThirdGif,
 } from "../../utils";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 export default function App() {
+  useGSAP(() => {
+    gsap.fromTo(
+      ".slider > div", 
+      {
+        opacity: 0,
+        y: -100,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".slider", 
+          start: "top 80%", 
+          end: "top 30%",
+          scrub: true,
+          stagger: 0.1, 
+        },
+      }
+    );
+  }, []);
+
   const swiperRef = useRef(null);
   const gifDurations = [5000, 5000, 5000, 5000];
 
@@ -49,7 +72,7 @@ export default function App() {
 
   return (
     <>
-      <div id="Popular" className="mb-40 mt-20">
+      <div id="Popular" className="slider mb-40 mt-20">
         <Swiper
           // scrollbar={{
           //   hide: true,

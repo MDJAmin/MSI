@@ -22,7 +22,7 @@ export default function Hero() {
           opacity: 0,
           y: 100,
         },
-        { opacity: 0.9, y: -1, duration: 4 }
+        { opacity: 0.9, y: -1, duration: 4 , delay:7,}
       ),
       gsap.fromTo(
         ".btn",

@@ -35,7 +35,7 @@ const Tech = () => {
   ];
   useGSAP(() => {
     gsap.fromTo(
-      ".Tech-items > div", // target the child div elements
+      ".Tech-items > div", 
       {
         opacity: 0,
         y: -100,
@@ -44,11 +44,11 @@ const Tech = () => {
         y: 0,
         opacity: 1,
         scrollTrigger: {
-          trigger: ".Tech-items", // trigger the animation when .Tech-items comes into view
-          start: "top 80%", // adjust the start position to your liking
+          trigger: ".Tech-items", 
+          start: "top 80%", 
           end: "top 30%",
           scrub: true,
-          stagger: 0.1, // adjust the stagger value to your liking
+          stagger: 0.1, 
         },
       }
     );
