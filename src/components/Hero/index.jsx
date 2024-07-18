@@ -17,14 +17,6 @@ export default function Hero() {
         duration: 4,
       },
       gsap.fromTo(
-        ".Video-logo",
-        {
-          opacity: 0,
-          y: 100,
-        },
-        { opacity: 0.9, y: -1, duration: 4 , delay:7,}
-      ),
-      gsap.fromTo(
         ".btn",
         {
           opacity: 0,
@@ -40,7 +32,7 @@ export default function Hero() {
         <p className="text-5xl font-bold tracking-widest hero-title">
           MSI Compony
         </p>
-        <div className="md:w-10/12 w-9/12">
+        <div className=" md:w-10/12 w-9/12">
           <video
             className="pointer-events-none"
             autoPlay
