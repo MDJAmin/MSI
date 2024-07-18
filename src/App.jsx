@@ -4,6 +4,7 @@ import Popular from "./components/Popular/Popular";
 import Model from "./components/Model/Model";
 import Tech from "./components/Tech/Tech";
 import Features from "./components/Features/Features";
+import Footer from "./components/Footer/Footer";
 
 export default function App() {
   return (
@@ -12,8 +13,9 @@ export default function App() {
       <Hero />
       <Popular />
       <Model />
-      <Tech/>
-      <Features/>
+      <Tech />
+      <Features />
+      <Footer />
     </main>
   );
 }

@@ -40,7 +40,10 @@ const Features = () => {
           <h1 id="features_title" className="section-heading ps-24">
             Explore the full story.
           </h1>
-          <div id="features_title" className="section-heading mb-24 ps-24 mt-20" >
+          <div
+            id="features_title"
+            className="section-heading mb-24 ps-24 mt-20"
+          >
             <h2 className="text-5xl lg:text-7xl font-semibold">iPhone.</h2>
             <h2 className="text-5xl lg:text-7xl font-semibold">
               Forged in deeps of hell.
@@ -49,7 +52,6 @@ const Features = () => {
         </div>
 
         <div className="flex flex-col justify-center items-center overflow-hidden">
-
           <div className="flex-center flex-col sm:px-10">
             <div className="relative h-[40vh] mb-10 w-[91%] flex items-center">
               <img
@@ -86,24 +88,21 @@ const Features = () => {
               <div className="feature-text-container">
                 <div className="flex-1 flex-center">
                   <p className="feature-text g_text">
-                    iPhone 15 Pro is{" "}
+                    MSI's new motherboards are{" "}
                     <span className="text-white">
-                      the first iPhone to feature an aerospace-grade titanium
-                      design
+                      the first to feature a 10-layer PCB design
                     </span>
-                    , using the same alloy that spacecrafts use for missions to
-                    Mars.
+                    , providing unparalleled signal integrity and stability.
                   </p>
                 </div>
 
                 <div className="flex-1 flex-center">
                   <p className="feature-text g_text">
-                    Titanium has one of the best strength-to-weight ratios of
-                    any metal, making these our{" "}
+                    With a focus on overclocking, MSI's new motherboards boast{" "}
                     <span className="text-white">
-                      lightest Pro models ever.
+                      the most advanced power delivery system
                     </span>
-                    You'll notice the difference the moment you pick one up.
+                    , ensuring stable power to your CPU and RAM.
                   </p>
                 </div>
               </div>
