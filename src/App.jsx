@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero";
 import Popular from "./components/Popular/Popular";
 import Model from "./components/Model/Model";
-// import Tech from "./components/Tech/Tech";
+import Tech from "./components/Tech/Tech";
 
 export default function App() {
   return (
@@ -11,7 +11,7 @@ export default function App() {
       <Hero />
       <Popular />
       <Model />
-      {/* <Tech/> */}
+      <Tech/>
     </main>
   );
 }

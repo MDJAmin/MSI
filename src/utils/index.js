@@ -16,7 +16,6 @@ import highlightFourthmvgif from "/assets/videos/hightlight-fourth.gif";
 
 import exploremv from "/assets/videos/explore.jpg";
 
-
 import msi from "/assets/images/msi.svg";
 import search from "/assets/images/search.svg";
 import bag from "/assets/images/bag.svg";
@@ -29,7 +28,6 @@ import pause from "/assets/images/pause.svg";
 import explore1 from "/assets/images/explore1.mp4";
 import explore2 from "/assets/images/explore2.jpg";
 import chip from "/assets/images/chip.jpg";
-
 
 export const heroVideo = hmv;
 export const smallHeroVideo = smallmv;
@@ -44,7 +42,6 @@ export const highlightThirdGif = highlightThirdmvgif;
 export const highlightFourthGif = highlightFourthmvgif;
 
 export const exploreVideo = exploremv;
-
 
 export const msiImg = msi;
 export const searchImg = search;
