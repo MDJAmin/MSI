@@ -23,9 +23,9 @@ export default function Model() {
           scrollTrigger: {
             trigger: header,
             start: "bottom bottom",
-            end: "top 30%",
+            end: "top 70%",
             scrub: true,
-            stagger: 1,
+            stagger: 4,
             display: 3,
             direction: 5,
           },
@@ -34,9 +34,9 @@ export default function Model() {
     });
   }, []);
   return (
-    <section className="common-padding">
+    <section className="common-padding  bg-zinc">
       <div className="screen-max-width" ref={scrollRef}>
-        <div className="text-center text-4xl flex justify-center gap-2">
+        <div className="text-center text-5xl flex justify-center gap-2 mt-28">
           <p className="Paragraphs">Take</p>
           <p className="Paragraphs">a</p>
           <p className="Paragraphs">closer</p>
@@ -45,16 +45,15 @@ export default function Model() {
           <p className="Paragraphs">our</p>
           <p className="Paragraphs">new</p>
           <p className="Paragraphs">model</p>
-          <p className="Paragraphs">.</p>
         </div>
         <div className="flex flex-col items-center mt-5">
-          <div className=" w-full h-[75vh] md:h-[90vh] overflow-hidden relative">
+          <div className=" w-full h-[90vh] md:h-[90vh] overflow-hidden relative left-20">
             <Model3D />
           </div>
         </div>
-        <div className="h-0">
+        <div className="h-0 mt-24">
           <p className="text-center relative bottom-60 Paragraphs">
-            MSI GF65 Thin 10UE-213 15.6" Gaming Laptop
+            MSI GF65 Thin 10UE-213 15.6" Gaming pc
           </p>
           <br />
           <p className="text-center relative bottom-60 Paragraphs opacity-75">
