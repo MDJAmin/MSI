@@ -1,130 +1,19 @@
-// import React, { useRef } from "react";
-// // Import Swiper React components
-// import { Swiper, SwiperSlide } from "swiper/react";
-
-// // Import Swiper styles
-// import "swiper/css";
-// import "swiper/css/scrollbar";
-
-// import "./style.module.css";
-
-// // import required modules
-// import { Scrollbar } from "swiper/modules";
-// import {
-//   highlightFirstGif,
-//   highlightFirstVideo,
-//   highlightFourthGif,
-//   highlightFourthVideo,
-//   highlightSecondGif,
-//   highlightSecondVideo,
-//   highlightThirdGif,
-//   highlightThirdVideo,
-// } from "../../utils";
-
-// export default function App() {
-//   const swiperRef = useRef(null);
-
-//   const handleVideoEnd = () => {
-//     if (swiperRef.current && swiperRef.current.swiper) {
-//       swiperRef.current.swiper.slideNext();
-//     }
-//   };
-
-//   return (
-//     <>
-//       <div id="Popular">
-//         <Swiper
-//           scrollbar={{
-//             hide: true,
-//           }}
-//           modules={[Scrollbar]}
-//           className="mySwiper"
-//           ref={swiperRef}
-//         >
-//           <SwiperSlide>
-//             <div className="flex">
-//             <video
-//               className="pointer-events-none w-full  px-36 slider-video"
-//               autoPlay
-//               muted
-//               playsInline={true}
-//               onEnded={handleVideoEnd}
-//             >
-//               <source src={highlightFirstVideo} type="video/mp4" />
-//             </video></div>
-//             {/* <img src={highlightFirstGif} alt="" /> */}
-//           </SwiperSlide>
-//           <SwiperSlide>
-//             <div className="flex">
-//             <video
-//               className="pointer-events-none w-full px-36 slider-video"
-//               autoPlay
-//               muted
-//               playsInline={true}
-//               onEnded={handleVideoEnd}
-//             >
-//               <source src={highlightSecondVideo} type="video/mp4" />
-//             </video></div>
-//             {/* <img src={highlightSecondGif} alt="" /> */}
-//           </SwiperSlide>
-//           <SwiperSlide>
-//             <div className="flex">
-//             <video
-//               className="pointer-events-none w-full px-36 slider-video"
-//               autoPlay
-//               muted
-//               playsInline={true}
-//               onEnded={handleVideoEnd}
-//             >
-//               <source src={highlightThirdVideo} type="video/mp4" />
-//             </video></div>
-//             {/* <img src={highlightThirdGif} alt="" /> */}
-//           </SwiperSlide>
-//           <SwiperSlide>
-//             <div className="flex">
-//             <video
-//               className="pointer-events-none w-full px-36 slider-video"
-//               autoPlay
-//               muted
-//               playsInline={true}
-//               onEnded={handleVideoEnd}
-//             >
-//               <source src={highlightFourthVideo} type="video/mp4" />
-//             </video></div>
-//             {/* <img src={highlightFourthGif} alt="" /> */}
-//           </SwiperSlide>
-//         </Swiper>
-//       </div>
-//     </>
-//   );
-// }
 import React, { useRef, useEffect } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/scrollbar";
-
 import "./style.module.css";
-
-// import required modules
 import { Scrollbar } from "swiper/modules";
 import {
   highlightFirstGif,
-  highlightFirstVideo,
   highlightFourthGif,
-  highlightFourthVideo,
   highlightSecondGif,
-  highlightSecondVideo,
   highlightThirdGif,
-  highlightThirdVideo,
 } from "../../utils";
-import Model from "../Model";
 
 export default function App() {
   const swiperRef = useRef(null);
-  const gifDurations = [5000, 5000, 5000, 5000]; // Example durations in milliseconds for each GIF
+  const gifDurations = [5000, 5000, 5000, 5000];
 
   useEffect(() => {
     const swiperInstance = swiperRef.current.swiper;
@@ -145,18 +34,14 @@ export default function App() {
     };
 
     swiperInstance.on("slideChange", () => {
-      // Clear all timeouts when slide changes
       timeouts.forEach(clearTimeout);
       timeouts = [];
 
-      // Set timeout for the new active slide
       setSlideTimeout(swiperInstance.activeIndex);
     });
 
-    // Set initial timeout for the first slide
     setSlideTimeout(swiperInstance.activeIndex);
 
-    // Cleanup on unmount
     return () => {
       timeouts.forEach(clearTimeout);
     };

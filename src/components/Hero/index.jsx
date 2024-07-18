@@ -3,7 +3,6 @@ import gsap from "gsap";
 import React, { useState } from "react";
 import { heroVideo } from "../../utils";
 import "./style.module.css";
-import { Link } from "react-router-dom";
 export default function Hero() {
   useGSAP(() => {
     gsap.fromTo(

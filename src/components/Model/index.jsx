@@ -16,7 +16,6 @@ export default function Model() {
         {
           opacity: 0,
           y: -100,
-    
         },
         {
           y: 0,
@@ -27,14 +26,12 @@ export default function Model() {
             end: "top 30%",
             scrub: true,
             stagger: 1,
-            display:3,
-            direction:5,
+            display: 3,
+            direction: 5,
           },
         }
       );
     });
-
-    
   }, []);
   return (
     <section className="common-padding">
@@ -56,17 +53,17 @@ export default function Model() {
           </div>
         </div>
         <div className="h-0">
-        <p className="text-center relative bottom-60 Paragraphs">
-    
-          MSI GF65 Thin 10UE-213 15.6" Gaming Laptop
-        </p>
-        <br />
-        <p className="text-center relative bottom-60 Paragraphs opacity-75">
-          Elevate your gaming and productivity experience with the MSI GF65 Thin
-          10UE-213. This high-performance laptop is designed for gamers and
-          power users who demand the best. Featuring cutting-edge technology and
-          sleek aesthetics, it is the perfect companion for both work and play.
-        </p>
+          <p className="text-center relative bottom-60 Paragraphs">
+            MSI GF65 Thin 10UE-213 15.6" Gaming Laptop
+          </p>
+          <br />
+          <p className="text-center relative bottom-60 Paragraphs opacity-75">
+            Elevate your gaming and productivity experience with the MSI GF65
+            Thin 10UE-213. This high-performance laptop is designed for gamers
+            and power users who demand the best. Featuring cutting-edge
+            technology and sleek aesthetics, it is the perfect companion for
+            both work and play.
+          </p>
         </div>
       </div>
     </section>

@@ -37,7 +37,7 @@ export default function Navbar() {
   return (
     <header className="w-full py-5 sm:px-10 px-5 flex justify-between items-center">
       <nav className="flex w-full screen-max-width">
-     <img src={msiImg} alt="MSI" className="logo-icon w-10 opacity-0" />
+        <img src={msiImg} alt="MSI" className="logo-icon w-10 opacity-0" />
 
         <div className="flex flex-1 justify-center mt-5 max-sm:hidden">
           {navLists.map((nav) => (
