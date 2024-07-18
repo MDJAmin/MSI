@@ -31,7 +31,7 @@ export default function Hero() {
           opacity: 0,
           scrub: true,
         },
-        { opacity: 0.9, duration: 4, delay: 2, scrub: true }
+        { opacity: 0.9, duration: 3, delay: 1, scrub: true }
       )
     );
   }, []);

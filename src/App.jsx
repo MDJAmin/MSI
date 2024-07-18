@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Popular from "./components/Popular/Popular";
 import Model from "./components/Model/Model";
 import Tech from "./components/Tech/Tech";
+import Features from "./components/Features/Features";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Popular />
       <Model />
       <Tech/>
+      <Features/>
     </main>
   );
 }
