@@ -1,5 +1,5 @@
 import React from "react";
-import { BallCanvas } from "../canvas/Ball"; // Assuming BallCanvas correctly handles the 'icon' prop
+import { BallCanvas } from "../canvas/Ball";
 import { SectionWrapper } from "../../hoc";
 import javascript from "../../assets/tech/javascript.png";
 import typescript from "../../assets/tech/typescript.png";
@@ -14,7 +14,6 @@ import git from "../../assets/tech/git.png";
 import figma from "../../assets/tech/figma.png";
 import docker from "../../assets/tech/docker.png";
 import threejs from "../../assets/tech/threejs.svg";
-
 
 const Tech = () => {
   const technologies = [

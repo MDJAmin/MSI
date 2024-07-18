@@ -8,7 +8,7 @@ import {
   useTexture,
 } from "@react-three/drei";
 
-import CanvasLoader from "../Loader";
+import CanvasLoader from "../Loader/Loader";
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
@@ -54,4 +54,5 @@ const BallCanvas = ({ icon }) => {
   );
 };
 
+export { BallCanvas }; // Add this line
 export default BallCanvas;
