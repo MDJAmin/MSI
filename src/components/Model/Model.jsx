@@ -55,7 +55,7 @@ export default function Model() {
             <Model3D />
           </div>
         </div>
-        <div>
+        <div className="h-0">
         <p className="text-center relative bottom-60 Paragraphs">
     
           MSI GF65 Thin 10UE-213 15.6" Gaming Laptop

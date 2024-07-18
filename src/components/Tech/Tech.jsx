@@ -14,6 +14,8 @@ import git from "../../assets/tech/git.png";
 import figma from "../../assets/tech/figma.png";
 import docker from "../../assets/tech/docker.png";
 import threejs from "../../assets/tech/threejs.svg";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Tech = () => {
   const technologies = [
@@ -31,11 +33,30 @@ const Tech = () => {
     { name: "docker", icon: docker },
     { name: "threejs", icon: threejs },
   ];
-
+  useGSAP(() => {
+    gsap.fromTo(
+      ".Tech-items > div", // target the child div elements
+      {
+        opacity: 0,
+        y: -100,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".Tech-items", // trigger the animation when .Tech-items comes into view
+          start: "top 80%", // adjust the start position to your liking
+          end: "top 30%",
+          scrub: true,
+          stagger: 0.1, // adjust the stagger value to your liking
+        },
+      }
+    );
+  }, []);
   return (
-    <div className='flex flex-row flex-wrap justify-center gap-10'>
+    <div className="Tech-items flex flex-row flex-wrap justify-center gap-10">
       {technologies.map((technology) => (
-        <div className='w-28 h-28' key={technology.name}>
+        <div className="w-28 h-28" key={technology.name}>
           <BallCanvas icon={technology.icon} />
         </div>
       ))}
