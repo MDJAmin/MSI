@@ -13,7 +13,7 @@ export default function App() {
     <main className="bg-black">
       <Navbar />
       <Hero />
-      <Popular />
+      {/* <Popular /> */}
       <Model />
       <Tech />
       <Features />
