@@ -1,7 +1,6 @@
 import {
   Navbar,
   Hero,
-  Popular,
   Model,
   Tech,
   Features,
@@ -13,7 +12,6 @@ export default function App() {
     <main className="bg-black">
       <Navbar />
       <Hero />
-      {/* <Popular /> */}
       <Model />
       <Tech />
       <Features />
