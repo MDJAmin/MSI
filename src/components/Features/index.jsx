@@ -42,17 +42,7 @@ const Features = () => {
             <div className="flex flex-col w-full relative">
               <div className="feature-video-container">
                 <div className="overflow-hidden flex-1 h-[50vh]">
-                  <video
-                    playsInline
-                    id="exploreVideo"
-                    className="w-full h-full object-cover object-center"
-                    preload="none"
-                    muted
-                    autoPlay
-                    ref={videoRef}
-                  >
-                    <source src={explore1Img} type="video/mp4" />
-                  </video>
+                <img src={explore1Img} alt="titanium 2" className="feature-video g_grow" />
                 </div>
                 <div className="overflow-hidden flex-1 h-[50vh]">
                   <img src={explore2Img} alt="titanium 2" className="feature-video g_grow" />
