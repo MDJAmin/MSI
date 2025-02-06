@@ -11,11 +11,11 @@ export default function App() {
   return (
     <main className="bg-black">
       <Navbar />
-      <Hero />
+      {/* <Hero />
       <Model />
       <Tech />
       <Features />
-      <Footer />
+      <Footer /> */}
     </main>
   );
 }
