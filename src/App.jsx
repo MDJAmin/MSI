@@ -9,7 +9,7 @@ import {
 
 export default function App() {
   return (
-    <main className="bg-black">
+    <main className='bg-black'>
       <Navbar />
       <Hero />
       {/* <Model /> */}

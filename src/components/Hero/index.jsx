@@ -5,7 +5,9 @@ import { heroVideo, smallHeroVideo } from "../../utils";
 import "./style.module.css";
 
 export default function Hero() {
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
+  const [isSmallScreen, setIsSmallScreen] = useState(
+    window.innerWidth < 768
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -13,7 +15,8 @@ export default function Hero() {
     };
 
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    return () =>
+      window.removeEventListener("resize", handleResize);
   }, []);
 
   useGSAP(() => {
@@ -25,17 +28,31 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="w-full nav-height bg-black">
-      <div className="h-5/6 w-full flex-center flex-col">
-        <div className="md:w-10/12 w-9/12">
-          <video className="pointer-events-none" autoPlay muted playsInline key={isSmallScreen ? "small" : "large"}>
-            <source src={isSmallScreen ? smallHeroVideo : heroVideo} type="video/mp4" />
+    <section className='w-full nav-height bg-black'>
+      <div className='h-5/6 w-full flex-center flex-col'>
+        <div className='md:w-10/12 w-9/12'>
+          <video
+            className='pointer-events-none'
+            autoPlay
+            muted
+            playsInline
+            key={isSmallScreen ? "small" : "large"}
+          >
+            <source
+              src={
+                isSmallScreen ? smallHeroVideo : heroVideo
+              }
+              type='video/mp4'
+            />
           </video>
         </div>
       </div>
 
-      <div className="flex flex-col items-center relative">
-        <a href="#Popular" className="btn">
+      <div className='flex flex-col items-center relative'>
+        <a
+          href='#Popular'
+          className='btn'
+        >
           See More!
         </a>
       </div>
