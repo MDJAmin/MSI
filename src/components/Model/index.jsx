@@ -51,7 +51,7 @@ export default function Model() {
         </div>
 
         {/* Description Section */}
-        <div className="text-center mb-80">
+        <div className="text-center">
           <p className="Paragraphs text-2xl font-bold">
             MSI GF65 Thin 10UE-213 15.6" Gaming Laptop
           </p>

@@ -13,7 +13,7 @@ export default function App() {
       <Navbar />
       <Hero />
       <Model />
-      {/* <Tech /> */}
+      <Tech />
       {/* <Features /> */}
       {/* <Footer /> */}
     </main>
