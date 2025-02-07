@@ -24,12 +24,12 @@ useGLTF.preload('/MSI/models/pc.glb');
 
 export default function Model3D() {
   return (
-    <Canvas shadows dpr={[1, 1.5]} camera={{ position: [4, 1, 5], fov: 50 }}>
+    <Canvas shadows dpr={[1, 1.5]} camera={{ position: [4, 2.5, 5], fov: 50 }}>
       <Suspense fallback={null}>
         <ambientLight intensity={0.8} />
         <directionalLight position={[5, 5, 5]} castShadow intensity={1} />
         <Model />
-        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
+        <OrbitControls enableZoom={false}/>
       </Suspense>
     </Canvas>
   );
