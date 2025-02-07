@@ -25,7 +25,6 @@ export default function Navbar() {
       ".nav-items",
       {
         opacity: 0,
-        y: -30,
       },
       {
         y: 0,
