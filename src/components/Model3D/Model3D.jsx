@@ -1,27 +1,35 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useMemo } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 
 function Model() {
-  const { scene } = useGLTF('/MSI/models/pc.glb'); // Adjust the path if needed
+  const { scene } = useGLTF('/MSI/models/pc.glb', true); // Cache enabled for faster re-use
 
-  console.log('Model scene:', scene); // Check if materials are present in the console
+  const optimizedScene = useMemo(() => {
+    scene.traverse((obj) => {
+      if (obj.isMesh) {
+        obj.castShadow = true;
+        obj.receiveShadow = true;
+        obj.frustumCulled = true; 
+      }
+    });
+    return scene;
+  }, [scene]);
 
-  return <primitive object={scene} scale={[0.4, 0.4, 0.4]} />;
+  return <primitive object={optimizedScene} scale={[0.4, 0.4, 0.4]} />;
 }
 
-// Preload the GLTF file
-useGLTF.preload('/MSI/models/scene.gltf');
+// Preload GLTF
+useGLTF.preload('/MSI/models/pc.glb');
 
 export default function Model3D() {
   return (
-    <Canvas>
+    <Canvas shadows dpr={[1, 1.5]} camera={{ position: [4, 1, 5], fov: 50 }}>
       <Suspense fallback={null}>
-        <ambientLight intensity={5}/>
-        <pointLight position={[10, 10, 10]} />
+        <ambientLight intensity={0.8} />
+        <directionalLight position={[5, 5, 5]} castShadow intensity={1} />
         <Model />
-        <OrbitControls enableZoom={false}  maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2}/>
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
       </Suspense>
     </Canvas>
   );
