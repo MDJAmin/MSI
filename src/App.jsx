@@ -15,7 +15,7 @@ export default function App() {
       <Model />
       <Tech />
       <Features />
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }

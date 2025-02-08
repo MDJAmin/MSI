@@ -4,16 +4,16 @@ import { footerLinks } from "../../constants";
 const Footer = () => {
   return (
     <footer className="py-5 sm:px-10 px-5">
-      <div className="screen-max-width">
+      <div className="screen-max-width tracking-wider">
         <div>
-          <p className="font-semibold text-gray text-xs">
+          <p className="font-semibold text-gray text-xs tracking-wider flex gap-1">
             Explore MSI:
             <span className="underline cursor-pointer text-red-500 hover:text-white transition-all">
-              Learn about MSI Gaming Laptops
+              <p>Learn about MSI Gaming Laptops</p>
             </span>
             or
             <span className="underline cursor-pointer text-red-500 hover:text-white transition-all">
-              MSI Motherboards
+              <p>MSI Motherboards</p>
             </span>
             and more.
           </p>
