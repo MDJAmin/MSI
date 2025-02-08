@@ -35,7 +35,7 @@ const Tech = () => {
   ];
   useGSAP(() => {
     gsap.fromTo(
-      ".Tech-items > div", 
+      ".Tech-items > div",
       {
         opacity: 0,
         y: -100,
@@ -44,19 +44,22 @@ const Tech = () => {
         y: 0,
         opacity: 1,
         scrollTrigger: {
-          trigger: ".Tech-items", 
-          start: "top 80%", 
+          trigger: ".Tech-items",
+          start: "top 80%",
           end: "top 30%",
           scrub: true,
-          stagger: 0.1, 
+          stagger: 0.1,
         },
       }
     );
   }, []);
   return (
-    <div className="Tech-items flex flex-row flex-wrap justify-center gap-10">
+    <div className='Tech-items flex flex-row flex-wrap justify-center gap-10'>
       {technologies.map((technology) => (
-        <div className="w-28 h-28 cursor-pointer mb-16" key={technology.name}>
+        <div
+          className='w-28 h-28 cursor-pointer mb-16'
+          key={technology.name}
+        >
           <BallCanvas icon={technology.icon} />
         </div>
       ))}
