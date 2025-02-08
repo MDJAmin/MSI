@@ -14,7 +14,7 @@ export default function App() {
       <Hero />
       <Model />
       <Tech />
-      {/* <Features /> */}
+      <Features />
       {/* <Footer /> */}
     </main>
   );
